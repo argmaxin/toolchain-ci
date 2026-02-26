@@ -55,6 +55,7 @@ RUN --mount=type=cache,target=/var/cache/apk \
 	apk add --no-cache \
 	abseil-cpp-dev \
 	boost1.84-dev \
-	pkgconf 
+	pkgconf \
+	g++
 
 CMD [ "/bin/bash" ]
