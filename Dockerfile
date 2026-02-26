@@ -1,9 +1,3 @@
-LABEL org.opencontainers.image.title="Systems Toolchain"
-LABEL org.opencontainers.image.version="0.2.0"
-LABEL org.opencontainers.image.description="Pinned Alpine-based systems development toolchain"
-LABEL org.opencontainers.image.source="https://github.com/argmaxin/"
-LABEL org.opencontainers.image.created="2026-02-26"
-
 FROM alpine:3.23
 
 RUN --mount=type=cache,target=/var/cache/apk \
