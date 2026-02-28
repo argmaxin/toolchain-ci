@@ -58,4 +58,9 @@ RUN --mount=type=cache,target=/var/cache/apk \
 	pkgconf \
 	g++
 
+RUN --mount=type=cache,target=/var/cache/apk \
+	apk add --no-cache \
+	gcc-cross-embedded \
+	mingw-w64-gcc 
+
 CMD [ "/bin/bash" ]
