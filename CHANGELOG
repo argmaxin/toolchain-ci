@@ -1,0 +1,10 @@
+# VERSION 0.4.0
+
+- add `highway`
+- add `simde`
+- add `mimalloc2`
+- add `jemalloc`
+- add `openssl`
+- add `simdjson`
+- add `simdutf`
+- add `gmp`
