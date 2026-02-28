@@ -1,7 +1,9 @@
-FROM alpine:3.23
+FROM alpine:edge
 
 RUN --mount=type=cache,target=/var/cache/apk \
 	apk add --no-cache \
+	gcc \
+	g++ \
 	libgccjit-dev \
 	musl-dev \
 	make \
@@ -16,19 +18,18 @@ RUN --mount=type=cache,target=/var/cache/apk \
 	bison \
 	gawk \
 	sed \
+	ripgrep \
+	fzf \
+	vim \
 	python3 \
 	linux-headers \
-	gtest
-
-RUN --mount=type=cache,target=/var/cache/apk \
-	apk add --no-cache \
+	pkgconf \
 	perf \
 	stress-ng \
 	hyperfine \
 	strace \
 	ltrace \
 	git \
-	git-lfs \
 	mold \
 	lld \
 	lldb \
@@ -45,21 +46,22 @@ RUN --mount=type=cache,target=/var/cache/apk \
 	curl \
 	wget \
 	valgrind \
-	linux-tools
-
-RUN --mount=type=cache,target=/var/cache/apk \
-	apk add --no-cache \
-	rust
-
-RUN --mount=type=cache,target=/var/cache/apk \
-	apk add --no-cache \
+	linux-tools \
+	rust \
 	abseil-cpp-dev \
 	boost1.84-dev \
-	pkgconf \
-	g++
-
-RUN --mount=type=cache,target=/var/cache/apk \
-	apk add --no-cache \
+	highway-dev \
+	onetbb-dev \
+	simde-dev \
+	mimalloc2-dev \
+	jemalloc-dev \
+	gtest-dev \
+	zeromq-dev \
+	openssl-dev \
+	simdjson-dev \
+	simdutf-dev \
+	openmp-dev \
+	gmp-dev \
 	gcc-cross-embedded \
 	mingw-w64-gcc 
 
